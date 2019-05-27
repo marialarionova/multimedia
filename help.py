@@ -16,9 +16,10 @@ def rgb_gray(pic):
 
     return y_cbcr.astype('uint8')[:, :, 0]
 
-    gray_pic = rgb_gray(pic)
-    imsave('gray_pic.jpg', gray_pic) 
-    imshow(gray_pic)
+    brle_pic = brle(pic, 10)
+    imshow(brle_pic)
+    imsave('brle_pic.jpg', brle_pic) 
+    
     
 
 
