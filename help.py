@@ -20,10 +20,8 @@ def rgb_gray(pic):
     imsave('gw_pic.jpg', gw_pic)
     imshow(gw_pic)
     
-    sp_gray_pic = random_noise(gray_pic, mode="s&p", seed=None, clip=True)
-    imshow(sp_gray_pic)
-    
-    imsave('sp_gray_pic.jpg', sp_gray_pic)
+    diff_map_filtered = diff_map(img_as_float(gray_pic), img_as_float(filtered_pic), "gray-pic_filtered-pic")
+    imshow(diff_map_filtered)
 
      
     
