@@ -16,9 +16,10 @@ def rgb_gray(pic):
 
     return y_cbcr.astype('uint8')[:, :, 0]
 
-    brle_pic = brle(pic, 10)
-    imshow(brle_pic)
-    imsave('brle_pic.jpg', brle_pic) 
+    gw_pic = gray_world(pic)
+    imsave('gw_pic.jpg', gw_pic)
+    imshow(gw_pic)
+     
     
     
 
