@@ -16,9 +16,9 @@ def rgb_gray(pic):
 
     return y_cbcr.astype('uint8')[:, :, 0]
 
-gray_pic = rgb_gray(pic)
-imsave('gray_pic.jpg', gray_pic) 
-imshow(gray_pic)
+    gray_pic = rgb_gray(pic)
+    imsave('gray_pic.jpg', gray_pic) 
+    imshow(gray_pic)
     
 
 
