@@ -19,6 +19,12 @@ def rgb_gray(pic):
     gw_pic = gray_world(pic)
     imsave('gw_pic.jpg', gw_pic)
     imshow(gw_pic)
+    
+    sp_gray_pic = random_noise(gray_pic, mode="s&p", seed=None, clip=True)
+    imshow(sp_gray_pic)
+    
+    imsave('sp_gray_pic.jpg', sp_gray_pic)
+
      
     
     
