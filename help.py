@@ -16,16 +16,6 @@ def rgb_gray(pic):
 
     return y_cbcr.astype('uint8')[:, :, 0]
 
-    gw_pic = gray_world(pic)
-    imsave('gw_pic.jpg', gw_pic)
-    imshow(gw_pic)
-    
-    diff_map_filtered = diff_map(img_as_float(gray_pic), img_as_float(filtered_pic), "gray-pic_filtered-pic")
-    imshow(diff_map_filtered)
-
-     
-    
-    
 
 
 def create_hist(pic):
@@ -113,7 +103,6 @@ if __name__ == "__main__":
     # cv.imwrite('gaussian_3_15x15.jpg', gaussian_3_15x15)
 
 
-    # print(pic.shape)
 
     create_hist(pic)
 
@@ -181,6 +170,7 @@ if __name__ == "__main__":
     autoshift = ImageChops.offset(pilgray, 1, 0)
     autoshift.save('autoshift.jpg')
     autoshift = imread('autoshift.jpg')
+   
 
     docked_map_shift = docked_map(shift_1, autoshift, "shift_autoshift")
 
