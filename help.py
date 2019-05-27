@@ -19,7 +19,7 @@ def rgb_gray(pic):
 
 def create_hist(pic):
 
-    plt.hist(img.flatten(), 256, [0, 256], color='black')
+    plt.hist(pic.flatten(), 256, [0, 256], color='black')
     plt.xlim([0, 256])
     plt.show()
 
