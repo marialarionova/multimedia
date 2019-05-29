@@ -162,7 +162,7 @@ def main():
     plus_note(sample_rate, sample, notes_in_freq['C6'], 750)
     plus_note(sample_rate, sample, duration_milliseconds=250)
 
-    music_to_file('sample.wav', sample, sample_rate)
+    music_file('sample.wav', sample, sample_rate)
 
     audio, sample = 'melody.wav', 'sample.wav'
     plus_sample(audio, sample)
